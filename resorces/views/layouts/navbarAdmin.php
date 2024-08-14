@@ -37,8 +37,8 @@
                                     CATALOGOS
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">MARCAS</a></li>
-                                    <li><a class="dropdown-item" href="#">CATEGORIAS</a></li>
+                                    <li><a class="dropdown-item" href="/tienda/">MARCAS</a></li>
+                                    <li><a class="dropdown-item" href="/eccomerce/resorces/views/admin/modules/categorias.php">CATEGORIAS</a></li>
                                     <li><a class="dropdown-item" href="#">Sub CATEGORIAS</a></li>
                                     <li><a class="dropdown-item" href="#">PRODUCTOS</a></li>
                                 </ul>

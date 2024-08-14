@@ -1,39 +1,42 @@
 <?php
-
+    
     class RedirecionHelpers{
 
-        function Redirecion($sescion, $URI, $admin){
+        function Redirecion($sescion, $URI, $admin, $app_base){
             
-            $noSession = "/tienda/resorces/views/eccomerce/auth/login.php";
-            $siSession = "/tienda/index.php";
-            $adminSession = "/tienda/resorces/views/admin/auth/admin.php";
-            
-            if($sescion == 'null' && $URI != $noSession){
+            $noSession = "/$hola/resorces/views/eccomerce/auth/login.php";
+            $siSession = "/$app_base/index.php";
+            $adminSession = ".$app_base/resorces/views/admin/auth/admin.php";
+            // echo "Constructed URL: " . $noSession;
                 
-                echo "<script>console.log('".$sescion."')</script>";
-                header("Location: ".$noSession."");
-                exit();
-
-            }
-            if($sescion != "null"){
-                if( $admin != true && $URI != $siSession){
-
-                    echo "<script>console.log('".$sescion."')</script>";
-                    header("Location: ".$siSession."");
-                    exit();
-
-
-                }
-                if($admin === true && $URI != $adminSession){
-
-                    echo "<script>console.log('".$sescion.$admin."')</script>";
-                    header("Location: ".$adminSession."");
-                    exit();
-
-                }
+            // if($sescion == 'null' && $URI != $noSession){
                 
-            }
+            //     echo "<script>console.log('".$noSession."')</script>";
+            //     header("Location:" . $noSession);
+            //     echo $noSession;
+            //     exit();
+
+            // }
+            // if($sescion != "null"){
+            //     if( $admin != true && $URI != $siSession){
+
+            //         echo "<script>console.log('".$sescion."')</script>";
+            //         header("Location: ".$siSession."");
+            //         exit();
+
+
+            //     }
+            //     if($admin === true && $URI != $adminSession){
+
+            //         echo "<script>console.log('".$sescion.$admin."')</script>";
+            //         header("Location: ".$adminSession."");
+            //         exit();
+
+            //     }
+                
+            // }
             
+
 
         }
 
