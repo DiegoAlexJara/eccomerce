@@ -1,14 +1,12 @@
 <?php
     
     session_start();
-    include "App/Config/app.php";
-    $direcion = $app_base;
     if(!isset($_SESSION['usuario'])){$_SESSION['usuario']="null";}
     if(!isset($_SESSION['admin'])){$_SESSION['admin']=false;}
     require_once '../../../../App/Helpers/RedirecionHelpers.php';
     $redirecion = new RedirecionHelpers();
     $sessions = $_SESSION['usuario'];
-    $redirecion->Redirecion($_SESSION['usuario'], $_SERVER['REQUEST_URI'], $_SESSION['admin'], $direcion);
+    $redirecion->Redirecion($_SESSION['usuario'], $_SERVER['REQUEST_URI'], $_SESSION['admin']);
 
 ?>
 <!DOCTYPE html>

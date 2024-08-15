@@ -25,7 +25,7 @@
 
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page"
-                            href="/tienda/resorces/views/admin/modules/users.php">USUARIOS</a>
+                            href="/eccomerce/resorces/views/admin/modules/users.php">USUARIOS</a>
                     </li>
 
                     <li class="nav-item">
@@ -37,10 +37,10 @@
                                     CATALOGOS
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/tienda/">MARCAS</a></li>
+                                    <li><a class="dropdown-item" href="/eccomerce/resorces/views/admin/modules/marcas.php">MARCAS</a></li>
                                     <li><a class="dropdown-item" href="/eccomerce/resorces/views/admin/modules/categorias.php">CATEGORIAS</a></li>
-                                    <li><a class="dropdown-item" href="#">Sub CATEGORIAS</a></li>
-                                    <li><a class="dropdown-item" href="#">PRODUCTOS</a></li>
+                                    <li><a class="dropdown-item" href="/eccomerce/resorces/views/admin/modules/subCategorias.php">Sub CATEGORIAS</a></li>
+                                    <li><a class="dropdown-item" href="/eccomerce/resorces/views/admin/modules/productos.php">PRODUCTOS</a></li>
                                 </ul>
                             </div>
 

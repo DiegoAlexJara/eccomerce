@@ -2,10 +2,11 @@
     session_start();
     include "App/Config/app.php";
     require_once 'App/Helpers/RedirecionHelpers.php'; 
+    if(!isset($_SESSION['admin']) )$_SESSION['admin']=false; 
     if(!isset($_SESSION['usuario'])|| $_SESSION['usuario']=="null")$_SESSION['usuario'] = 'null';
     if(!isset($_SESSION['nombre']))$_SESSION['nombre'] = 'null';
     $redirecion = new RedirecionHelpers();
-    $redirecion->Redirecion($_SESSION['usuario'], $_SERVER['REQUEST_URI'], $_SESSION['admin'],$app_base);
+    $redirecion->Redirecion($_SESSION['usuario'], $_SERVER['REQUEST_URI'], $_SESSION['admin'],"eccomerce");
     $usuario =$_SESSION['nombre']; 
 
 ?>

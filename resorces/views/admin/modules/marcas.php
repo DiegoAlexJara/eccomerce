@@ -31,9 +31,8 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">NOMBRE</th>
-                <th scope="col">ID</th>
-                <th scope="col">CORREO</th>
-                <th scope="col">ADMIN</th>
+                <th scope="col">DESCRIPCION</th>
+                
                 
             </tr>
         </thead>
@@ -43,8 +42,7 @@
 
                 require_once "../../../../App/Classes/BDD.php";
                 $Conexion = new BDD("tienda");
-                $sql = "SELECT * FROM usuario";
-                $i = 0;
+                $sql = "SELECT * FROM categorias";
                 $resultado = $Conexion->exequteQuery($sql);
                 while($row = mysqli_fetch_array($resultado)){
 
@@ -52,36 +50,19 @@
             <tr>
                 <th scope="row"> 
                     <?php
-                            $i++;
-                            echo $row['usuario_id']
+                            echo $row['Categoria_id']
                     ?>
                 </th>
                 <td>
                     <?php
-                        echo $row['usuario_nombre'];
+                        echo $row['Categoria_nombre'];
                     ?>
                 </td>
                 <td>
                     <?php
-                        echo $row['usuario_id'];
-                        $usuarios = $row['correo'];
+                        echo $row['Categoria_descripcion'];
                     ?>
                 </td>
-                <td>
-                    <?php
-                        echo $row['correo'];
-                    ?>
-                </td>
-                <td>
-                    <?php  
-                        if($row['is_admin']){
-                            echo "true";
-                        }
-                        else{
-                            echo "false";
-                        }
-                    ?>
-                    </td>
                 <td><div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     ACCIONES
